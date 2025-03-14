@@ -23,9 +23,12 @@ class LoadStreamlitUI:
 
     def load_streamlit_ui(self):
             # st.set_page_config(page_title= "🤖 " + self.config.get_page_title(), layout="wide")
-            st.set_page_config(page_title= "🤖 ".join(self.config.get_pagetitle_option()) , layout="wide")
+            # st.set_page_config(page_title= "🤖 ".join(self.config.get_pagetitle_option()) , layout="wide")
+            st.set_page_config(page_title= self.config.get_pagetitle_option() , layout="wide")
+         
             # print("config Page title:-"+self.config.get_pagetitle_option()[0])
-            st.header("🤖 ".join(self.config.get_pagetitle_option()))
+            # st.header("🤖 ".join(self.config.get_pagetitle_option()))
+            st.header(self.config.get_pagetitle_option())
             st.session_state.timeframe = ''
             st.session_state.IsFetchButtonClicked = False
             st.session_state.IsSDLC = False
