@@ -5,7 +5,8 @@ class Config:
         self.config=ConfigParser()
         self.config.read(config_file)
     def get_llm_option(self):
-        return self.config["DEFAULT"].get("LLM_OPTIONS").split(", ") 
+        print("type of llm option----------------:"+type(self.config["DEFAULT"].get("LLM_OPTIONS")))
+        return self.config["DEFAULT"].get("LLM_OPTIONS").split(", ")
     def get_usecase_option(self):
         return self.config["DEFAULT"].get("USECASE_OPTIONS").split(", ") 
     def get_groqmodel_option(self):
