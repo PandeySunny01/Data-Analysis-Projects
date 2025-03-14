@@ -20,10 +20,12 @@ class DisplayResultStreamlit:
                         print(value['messages'])
                         with st.chat_message("user"):
                             st.write(user_message)
+                            # st.button("this is user message")
                         with st.chat_message("assistant"):
                             st.write(value["messages"].content)
+                            # st.button("this is assistant message")
 
-        elif usecase=="Chatbot with Tool":
+        elif usecase=="Chatbot with tool":
              # Prepare state and invoke the graph
             initial_state = {"messages": [user_message]}
             res = graph.invoke(initial_state)
